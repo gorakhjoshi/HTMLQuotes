@@ -3,25 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>replit</title>
+    <title>Quotes in HTML</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    <p>
-      The officer left a note saying
-      <q cite="https://johnrhea.com/summons" class="show-cite"
-        >You have been summoned to appear on the 4th day of January on charges
-        of attempted reader bribery.</q
-      >
-    </p>
+    The author of
+    <cite>Quoting in HTML: Quotations, Citations, and Blockquotes</cite> makes
+    promises about baked goods that he can't keep.
 
-    <p>
-      The officer left a note saying
-      <q cite="https://johnrhea.com/summons" class="on-hover"
-        >You have been summoned to appear on the 4th day of January on charges
-        of attempted reader bribery.</q
-      >
-    </p>
+    <!-- This is apparently wrong -->
+    <blockquote>
+      Quote about cupcake distribution from an article
+      <cite>The Article</cite>
+    </blockquote>
+
+    <!-- This is apparently wrong -->
+    <div class="need-to-style-together">
+      <blockquote>Quote about cupcake distribution from an article</blockquote>
+      <cite>The Article</cite>
+    </div>
   </body>
 </html>
