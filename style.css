@@ -1,24 +1,35 @@
-blockquote {
-  text-indent: -0.45em;
-  border-left: 2px solid red;
+q::before,
+q::after {
+  animation: dancing 1s linear infinite;
+  display: inline-block;
+  transform: rotate(13deg);
 }
-/* There is a nicer way to handle this by using the hanging-punctuation CSS property. It’s only supported in Safari at the time of this writing */
-/* @supports (hanging-punctuation: first) {
-  blockquote {
-    text-indent: 0;
-    hanging-punctuation: first;
-  }
-} */
 
-blockquote::before {
-  content: open-quote;
+@keyframes dancing {
+  0% {
+    transform: rotate(13deg) scale(2);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-13deg) scale(2);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(13deg) scale(2);
+  }
 }
-blockquote::after {
-  content: close-quote;
+q {
+  quotes: '‘' '’' '“' '”' '‘' '’' '“' '”';
 }
-blockquote {
-  quotes: '“' '”' '‘' '’';
-}
+
 body {
   max-width: 20em;
   margin: 1em;
