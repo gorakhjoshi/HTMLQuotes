@@ -1,9 +1,26 @@
+blockquote {
+  text-indent: -0.45em;
+  border-left: 2px solid red;
+}
+/* There is a nicer way to handle this by using the hanging-punctuation CSS property. It’s only supported in Safari at the time of this writing */
+/* @supports (hanging-punctuation: first) {
+  blockquote {
+    text-indent: 0;
+    hanging-punctuation: first;
+  }
+} */
+
+blockquote::before {
+  content: open-quote;
+}
+blockquote::after {
+  content: close-quote;
+}
+blockquote {
+  quotes: '“' '”' '‘' '’';
+}
 body {
   max-width: 20em;
   margin: 1em;
   font: 1.4rem/1.4 Georgia, serif;
-}
-
-.british q {
-  quotes: '“' '”' '‘' '’' '“' '”' '‘' '’' '“' '”';
 }
