@@ -1,5 +1,17 @@
+/* NOTE: you must add the closing smart quote as q's automatic quotes are added with pseudo elements */
+q.show-cite[cite]::after {
+  content: '” (' attr(cite) ') ';
+}
+
+q.on-hover[cite]::before {
+  content: '“';
+}
+q.on-hover[cite]:hover::after {
+  content: '” (' attr(cite) ') ';
+}
+
 body {
   max-width: 20em;
   margin: 1em;
-  font: 1.8rem/1.4 Georgia, serif;
+  font: 1.25rem/1.4 Georgia, serif;
 }
